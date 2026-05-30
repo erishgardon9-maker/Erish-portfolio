@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Dashboard – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
+              
+ <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background: rgb(87, 2, 37); min-height: 100vh; color: hotpink; }
 
@@ -118,6 +119,10 @@
     .toast.show { }
 
     #m-img-input { display: none; }
+
+    .gallery img{
+     image-orientation: inherit; image-rendering:initial; shape-image-threshold: inherit; ; image-resolution: inherit; padding: 30px; width: 10px; height: 20px; background-image: 10px;
+    }
   </style>
 </head>
 <body>
@@ -191,10 +196,26 @@
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
+<h9>
+
+ 
+    <img src="bading.jpg" alt="bading" width="180px" height="190px" padding="80px">
+    <img src="bes.jpg" alt="bes" width="180px" height="190px" padding="80px">
+    <img src="che.jpg" alt="che" width="180px" height="190px" padding="80px">
+
+</h9>
+
+
+
+
+<div class="center-link">
+  <a href="https://github.com/erishgardon9-maker/adiksayo"></a>
+
+</div>
 
 <script>
- 
+  const defaultEntries = 
+ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII   id:1, type:'quiz', title:'Quiz 1',         date:'February 10, 2026',  file:'quiz1.pdf', proof;
   const saved = JSON.parse(localStorage.getItem('dash_entries') || '[]');
   const savedIds = saved.map(e => e.id);
   const defaults = defaultEntries.filter(e => !savedIds.includes(e.id));
@@ -293,7 +314,7 @@
       hideEditorSection();
     }
     document.getElementById('modal').classList.add('open');
-  }
+  } 
 
   function closeModal() { document.getElementById('modal').classList.remove('open'); }
   function backdropClick(e) { if (e.target===document.getElementById('modal')) closeModal(); }
